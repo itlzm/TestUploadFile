@@ -74,7 +74,7 @@ public class FileUploadController {
 				// 文件保存路径
 				String filePath = request.getSession().getServletContext().getRealPath("/") + "upload/"
 						+ file.getOriginalFilename();
-				// 转存文件
+				// 转存文件 此处将上传的文件保存的目录
 				file.transferTo(new File(filePath));
 			} catch (Exception e) {
 				e.printStackTrace();
